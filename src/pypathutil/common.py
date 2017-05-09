@@ -5,6 +5,35 @@ def is_exe(path):
     return os.path.isfile(path) and os.access(path, os.X_OK)
 
 
+def remove(
+        folder: str,
+        path: str,
+        separator: str=os.pathsep,
+        remove_duplicates: bool=True,
+        remove_non_folders: bool=True,
+        remove_non_abs: bool=True,
+):
+    folder = clean(
+        folder,
+        separator,
+        remove_duplicates=remove_duplicates,
+        remove_non_folders=remove_non_folders,
+        remove_non_abs=remove_non_abs,
+    )
+    path_elements = path.split(separator)
+    if folder != "":
+        path_elements = [x for x in path_elements if x != folder]
+    new_path = separator.join(path_elements)
+    new_path = clean(
+        new_path,
+        separator,
+        remove_duplicates=remove_duplicates,
+        remove_non_folders=remove_non_folders,
+        remove_non_abs=remove_non_abs,
+    )
+    return new_path
+
+
 def add(
         folder: str,
         path: str,
