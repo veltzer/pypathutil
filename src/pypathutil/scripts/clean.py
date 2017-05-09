@@ -13,7 +13,6 @@ from pypathutil import common
     'path',
     type=str,
     required=True,
-    help="input path",
 )
 @click.option(
     '--separator',

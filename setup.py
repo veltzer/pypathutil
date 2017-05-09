@@ -6,7 +6,7 @@ if not sys.version_info[0] == 3:
 
 setuptools.setup(
     name='pypathutil',
-    version='0.0.2',
+    version='0.0.3',
     description='pypathutil is a module to help you deal with paths',
     long_description='pypathutil is a module to help you deal with paths',
     url='https://veltzer.github.io/pypathutil',

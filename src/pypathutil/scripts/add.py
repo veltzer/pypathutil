@@ -13,13 +13,11 @@ from pypathutil import common
     'path',
     type=str,
     required=True,
-    help="input path",
 )
 @click.argument(
     'folder',
     type=str,
     required=True,
-    help="folder to add to the path",
 )
 @click.option(
     '--head',
