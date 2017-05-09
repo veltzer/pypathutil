@@ -25,21 +25,18 @@ from pypathutil import common
     '--remove_duplicates/--no_remove_duplicates',
     required=False,
     default=True,
-    type=bool,
     help="remove duplicate elements from the path",
 )
 @click.option(
     '--remove_non_folders/--no_remove_non_folders',
     required=False,
     default=True,
-    type=bool,
     help="remove non folder elements from the path",
 )
 @click.option(
     '--remove_non_abs/--no_remove_non_abs',
     required=False,
     default=True,
-    type=bool,
     help="remove non absolute folder elements from the path",
 )
 def main(path, separator, remove_duplicates, remove_non_folders, remove_non_abs):
