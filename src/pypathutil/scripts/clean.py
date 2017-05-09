@@ -1,5 +1,5 @@
 """
-This script adds two paths together
+This script cleans a path, removing elements which repeat or are not valid paths
 """
 import os
 
@@ -14,19 +14,6 @@ from pypathutil import common
     type=str,
     required=True,
     help="input path",
-)
-@click.argument(
-    'folder',
-    type=str,
-    required=True,
-    help="folder to add to the path",
-)
-@click.option(
-    '--head',
-    required=False,
-    default=True,
-    type=bool,
-    help="add to the head of the path?",
 )
 @click.option(
     '--separator',
@@ -56,17 +43,16 @@ from pypathutil import common
     type=bool,
     help="remove non absolute folder elements from the path",
 )
-def main(path, folder, head, separator, remove_duplicates, remove_non_folders, remove_non_abs):
-    new_path = common.add(
+def main(path, separator, remove_duplicates, remove_non_folders, remove_non_abs):
+    path = common.clean(
         path=path,
-        folder=folder,
-        head=head,
         separator=separator,
         remove_duplicates=remove_duplicates,
         remove_non_folders=remove_non_folders,
         remove_non_abs=remove_non_abs,
     )
-    print(new_path)
+    print(path)
+
 
 if __name__ == "__main__":
     main()

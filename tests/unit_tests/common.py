@@ -48,7 +48,7 @@ class Foo(TestCase):
         result = common.add(
             path="/a:/b",
             folder="/c",
-            clean=False,
+            remove_non_folders=False,
             head=True,
         )
         self.assertEqual(result, "/c:/a:/b")
