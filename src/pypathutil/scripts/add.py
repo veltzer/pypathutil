@@ -20,7 +20,7 @@ from pypathutil import common
     required=True,
 )
 @click.option(
-    '--head',
+    '--head/--tail',
     required=False,
     default=True,
     type=bool,
@@ -34,21 +34,21 @@ from pypathutil import common
     help="what is the path separator",
 )
 @click.option(
-    '--remove_duplicates',
+    '--remove_duplicates/--no_remove_duplicates',
     required=False,
     default=True,
     type=bool,
     help="remove duplicate elements from the path",
 )
 @click.option(
-    '--remove_non_folders',
+    '--remove_non_folders/--no_remove_non_folders',
     required=False,
     default=True,
     type=bool,
     help="remove non folder elements from the path",
 )
 @click.option(
-    '--remove_non_abs',
+    '--remove_non_abs/--no_remove_non_abs',
     required=False,
     default=True,
     type=bool,
