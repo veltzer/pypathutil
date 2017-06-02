@@ -44,7 +44,7 @@ class Foo(TestCase):
         )
         self.assertEqual(result, "")
 
-    def test_add_head_dont_clean(self):
+    def test_add_head_no_clean(self):
         result = common.add(
             path="/a:/b",
             folder="/c",
