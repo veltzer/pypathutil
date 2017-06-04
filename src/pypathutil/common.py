@@ -1,7 +1,8 @@
 import os
+from typing import Union
 
 
-def is_exe(path):
+def is_exe(path: str) -> bool:
     return os.path.isfile(path) and os.access(path, os.X_OK)
 
 
@@ -12,14 +13,7 @@ def remove(
         remove_duplicates: bool=True,
         remove_non_folders: bool=True,
         remove_non_abs: bool=True,
-):
-    folder = clean(
-        folder,
-        separator,
-        remove_duplicates=remove_duplicates,
-        remove_non_folders=remove_non_folders,
-        remove_non_abs=remove_non_abs,
-    )
+) -> str:
     path_elements = path.split(separator)
     if folder != "":
         path_elements = [x for x in path_elements if x != folder]
@@ -42,10 +36,11 @@ def add(
         remove_duplicates: bool=True,
         remove_non_folders: bool=True,
         remove_non_abs: bool=True,
-):
-    folder = clean(
-        folder,
-        separator,
+) -> str:
+    path = remove(
+        folder=folder,
+        path=path,
+        separator=separator,
         remove_duplicates=remove_duplicates,
         remove_non_folders=remove_non_folders,
         remove_non_abs=remove_non_abs,
@@ -56,26 +51,26 @@ def add(
             path_elements.insert(0, folder)
         else:
             path_elements.append(folder)
-    new_path = separator.join(path_elements)
-    new_path = clean(
-        new_path,
+    path = separator.join(path_elements)
+    path = clean(
+        path,
         separator,
         remove_duplicates=remove_duplicates,
         remove_non_folders=remove_non_folders,
         remove_non_abs=remove_non_abs,
     )
-    return new_path
+    return path
 
 
-def do_remove_non_abs(path: str, separator: str=os.pathsep):
+def do_remove_non_abs(path: str, separator: str=os.pathsep) -> str:
     return separator.join([x for x in path.split(separator) if os.path.isabs(x)])
 
 
-def do_remove_non_folders(path: str, separator: str=os.pathsep):
+def do_remove_non_folders(path: str, separator: str=os.pathsep) -> str:
     return separator.join([x for x in path.split(separator) if os.path.isdir(x)])
 
 
-def do_remove_duplicates(path: str, separator: str=os.pathsep):
+def do_remove_duplicates(path: str, separator: str=os.pathsep) -> str:
     s = set()
     l = []
     for path_element in path.split(separator):
@@ -91,7 +86,7 @@ def clean(
         remove_duplicates: bool=True,
         remove_non_folders: bool=True,
         remove_non_abs: bool=True,
-):
+) -> str:
     """
     returns a reduced version of the path. This means without repetition and without parts
     which are not folders.
@@ -111,7 +106,7 @@ def clean(
     return path
 
 
-def find_in_path(path: str, app: str, separator: str=os.pathsep, strict: bool=False):
+def find_in_path(path: str, app: str, separator: str=os.pathsep, strict: bool=False) -> Union[None, str]:
     """
     Return the full path if found, None otherwise
     :param path: 

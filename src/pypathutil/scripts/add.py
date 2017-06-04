@@ -1,6 +1,3 @@
-"""
-This script adds two paths together
-"""
 import os
 
 import click
@@ -36,21 +33,35 @@ from pypathutil import common
     '--remove_duplicates/--no_remove_duplicates',
     required=False,
     default=True,
+    type=bool,
     help="remove duplicate elements from the path",
 )
 @click.option(
     '--remove_non_folders/--no_remove_non_folders',
     required=False,
     default=True,
+    type=bool,
     help="remove non folder elements from the path",
 )
 @click.option(
     '--remove_non_abs/--no_remove_non_abs',
     required=False,
     default=True,
+    type=bool,
     help="remove non absolute folder elements from the path",
 )
-def main(path, folder, head, separator, remove_duplicates, remove_non_folders, remove_non_abs):
+def main(
+        path: str,
+        folder: str,
+        head: bool,
+        separator: str,
+        remove_duplicates: bool,
+        remove_non_folders: bool,
+        remove_non_abs: bool,
+) -> None:
+    """
+    This script adds two paths together
+    """
     new_path = common.add(
         path=path,
         folder=folder,

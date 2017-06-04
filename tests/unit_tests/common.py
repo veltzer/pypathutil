@@ -44,6 +44,22 @@ class Foo(TestCase):
         )
         self.assertEqual(result, "")
 
+    def test_add_head_existing(self):
+        result = common.add(
+            path="/var:/tmp",
+            folder="/tmp",
+            head=True,
+        )
+        self.assertEqual(result, "/tmp:/var")
+
+    def test_add_tail_existing(self):
+        result = common.add(
+            path="/var:/tmp",
+            folder="/var",
+            head=False,
+        )
+        self.assertEqual(result, "/tmp:/var")
+
     def test_add_head_no_clean(self):
         result = common.add(
             path="/a:/b",

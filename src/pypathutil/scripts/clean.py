@@ -1,6 +1,3 @@
-"""
-This script cleans a path, removing elements which repeat or are not valid paths
-"""
 import os
 
 import click
@@ -25,21 +22,39 @@ from pypathutil import common
     '--remove_duplicates/--no_remove_duplicates',
     required=False,
     default=True,
+    type=bool,
     help="remove duplicate elements from the path",
 )
 @click.option(
     '--remove_non_folders/--no_remove_non_folders',
     required=False,
     default=True,
+    type=bool,
     help="remove non folder elements from the path",
 )
 @click.option(
     '--remove_non_abs/--no_remove_non_abs',
     required=False,
     default=True,
+    type=bool,
     help="remove non absolute folder elements from the path",
 )
-def main(path, separator, remove_duplicates, remove_non_folders, remove_non_abs):
+def main(
+        path: str,
+        separator: str,
+        remove_duplicates: bool,
+        remove_non_folders: bool,
+        remove_non_abs: bool,
+) -> None:
+    """
+    This script cleans a path, removing elements which repeat or are not valid paths
+    :param path:
+    :param separator:
+    :param remove_duplicates:
+    :param remove_non_folders:
+    :param remove_non_abs:
+    :return:
+    """
     path = common.clean(
         path=path,
         separator=separator,

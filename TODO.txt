@@ -1,0 +1,2 @@
+- add find_in_path utility
+- add merge two paths utility
