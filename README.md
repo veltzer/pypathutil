@@ -27,6 +27,13 @@ If you want to add to the tail of the path just use:
 
     $ export PATH=$(pypathutil_add --tail $PATH /usr/games/bin)
 
+If you are on windows and want a different separator
+
+    $ export PATH=$(pypathutil_add --separator \; $PATH /usr/games/bin)
+
+But default pypathutil will remove duplicate entries,
+remove non absolute paths, and remove folders which do not exist.
+All of these can be controlled with appropriate flags.
 
 ## Installing
 
@@ -46,4 +53,6 @@ If you don't have pip3 then you can probably get it using:
 
 After doing a little performance work it dawned on me that writing bash
 code to do the same will be much faster. And I actually wrote bash
-functions to add a
+functions to implement all of this but this package is still my best
+suggestion for people who want a solid foundation (bash can not be
+called solid).
