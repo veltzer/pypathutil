@@ -6,6 +6,42 @@ from pypathutil import common
 
 
 @click.command()
+@click.option(
+    '--head/--tail',
+    required=False,
+    default=True,
+    help="add to the head of the path?",
+    show_default=True,
+)
+@click.option(
+    '--separator',
+    required=False,
+    default=os.pathsep,
+    type=str,
+    help="what is the path separator",
+    show_default=True,
+)
+@click.option(
+    '--remove_duplicates/--no_remove_duplicates',
+    required=False,
+    default=True,
+    help="remove duplicate elements from the path",
+    show_default=True,
+)
+@click.option(
+    '--remove_non_folders/--no_remove_non_folders',
+    required=False,
+    default=True,
+    help="remove non folder elements from the path",
+    show_default=True,
+)
+@click.option(
+    '--remove_non_abs/--no_remove_non_abs',
+    required=False,
+    default=True,
+    help="remove non absolute folder elements from the path",
+    show_default=True,
+)
 @click.argument(
     'path',
     type=str,
@@ -15,37 +51,6 @@ from pypathutil import common
     'folder',
     type=str,
     required=True,
-)
-@click.option(
-    '--head/--tail',
-    required=False,
-    default=True,
-    help="add to the head of the path?",
-)
-@click.option(
-    '--separator',
-    required=False,
-    default=os.pathsep,
-    type=str,
-    help="what is the path separator",
-)
-@click.option(
-    '--remove_duplicates/--no_remove_duplicates',
-    required=False,
-    default=True,
-    help="remove duplicate elements from the path",
-)
-@click.option(
-    '--remove_non_folders/--no_remove_non_folders',
-    required=False,
-    default=True,
-    help="remove non folder elements from the path",
-)
-@click.option(
-    '--remove_non_abs/--no_remove_non_abs',
-    required=False,
-    default=True,
-    help="remove non absolute folder elements from the path",
 )
 def main(
         path: str,
