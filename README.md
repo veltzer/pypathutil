@@ -56,3 +56,10 @@ code to do the same will be much faster. And I actually wrote bash
 functions to implement all of this but this package is still my best
 suggestion for people who want a solid foundation (bash can not be
 called solid).
+
+## Using pypathutil API
+
+You can, of course, use pypathutil for it's API as a python module.
+It's quite intuitive.
+
+Mark Veltzer <mark.veltzer@gmail.com>
