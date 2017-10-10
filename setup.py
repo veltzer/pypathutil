@@ -1,18 +1,18 @@
 import setuptools
 
-import sys
-if not sys.version_info[0] == 3:
-    sys.exit("Sorry, only python version 3 is supported")
-
 setuptools.setup(
     name='pypathutil',
     version='0.0.10',
     description='pypathutil is a module to help you deal with paths',
     long_description='pypathutil is a module to help you deal with paths',
-    url='https://veltzer.github.io/pypathutil',
+    url='https://github.com/veltzer/pypathutil',
+    download_url='https://github.com/veltzer/pypathutil',
     author='Mark Veltzer',
     author_email='mark.veltzer@gmail.com',
+    maintainer='Mark Veltzer',
+    maintainer_email='mark.veltzer@gmail.com',
     license='MIT',
+    platforms=['python3'],
     classifiers=[
         'Development Status :: 3 - Alpha',
         'Intended Audience :: Developers',
