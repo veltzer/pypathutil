@@ -5,7 +5,7 @@ setuptools.setup(
     version='0.0.10',
     description='pypathutil is a module to help you deal with paths',
     long_description='pypathutil is a module to help you deal with paths',
-    url='https://github.com/veltzer/pypathutil',
+    url='https://veltzer.github.io/pypathutil',
     download_url='https://github.com/veltzer/pypathutil',
     author='Mark Veltzer',
     author_email='mark.veltzer@gmail.com',
