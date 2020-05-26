@@ -7,12 +7,12 @@ def is_exe(path: str) -> bool:
 
 
 def remove(
-        folder: str,
-        path: str,
-        separator: str=os.pathsep,
-        remove_duplicates: bool=True,
-        remove_non_folders: bool=True,
-        remove_non_abs: bool=True,
+    folder: str,
+    path: str,
+    separator: str = os.pathsep,
+    remove_duplicates: bool = True,
+    remove_non_folders: bool = True,
+    remove_non_abs: bool = True,
 ) -> str:
     path_elements = path.split(separator)
     if folder != "":
@@ -29,13 +29,13 @@ def remove(
 
 
 def add(
-        folder: str,
-        path: str,
-        head: bool,
-        separator: str=os.pathsep,
-        remove_duplicates: bool=True,
-        remove_non_folders: bool=True,
-        remove_non_abs: bool=True,
+    folder: str,
+    path: str,
+    head: bool,
+    separator: str = os.pathsep,
+    remove_duplicates: bool = True,
+    remove_non_folders: bool = True,
+    remove_non_abs: bool = True,
 ) -> str:
     path = remove(
         folder=folder,
@@ -62,30 +62,30 @@ def add(
     return path
 
 
-def do_remove_non_abs(path: str, separator: str=os.pathsep) -> str:
+def do_remove_non_abs(path: str, separator: str = os.pathsep) -> str:
     return separator.join([x for x in path.split(separator) if os.path.isabs(x)])
 
 
-def do_remove_non_folders(path: str, separator: str=os.pathsep) -> str:
+def do_remove_non_folders(path: str, separator: str = os.pathsep) -> str:
     return separator.join([x for x in path.split(separator) if os.path.isdir(x)])
 
 
-def do_remove_duplicates(path: str, separator: str=os.pathsep) -> str:
+def do_remove_duplicates(path: str, separator: str = os.pathsep) -> str:
     s = set()
-    l = []
+    unique = []
     for path_element in path.split(separator):
         if path_element not in s:
             s.add(path_element)
-            l.append(path_element)
-    return separator.join(l)
+            unique.append(path_element)
+    return separator.join(unique)
 
 
 def clean(
-        path: str,
-        separator: str=os.pathsep,
-        remove_duplicates: bool=True,
-        remove_non_folders: bool=True,
-        remove_non_abs: bool=True,
+    path: str,
+    separator: str = os.pathsep,
+    remove_duplicates: bool = True,
+    remove_non_folders: bool = True,
+    remove_non_abs: bool = True,
 ) -> str:
     """
     returns a reduced version of the path. This means without repetition and without parts
@@ -106,7 +106,7 @@ def clean(
     return path
 
 
-def find_in_path(path: str, app: str, separator: str=os.pathsep, strict: bool=False) -> Union[None, str]:
+def find_in_path(path: str, app: str, separator: str = os.pathsep, strict: bool = False) -> Union[None, str]:
     """
     Return the full path if found, None otherwise
     :param path: 

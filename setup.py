@@ -2,7 +2,7 @@ import setuptools
 
 setuptools.setup(
     name='pypathutil',
-    version='0.0.10',
+    version='0.0.11',
     description='pypathutil is a module to help you deal with paths',
     long_description='pypathutil is a module to help you deal with paths',
     url='https://veltzer.github.io/pypathutil',
