@@ -10,7 +10,7 @@ setuptools.setup(
     version='0.0.12',
     packages=[
         'pypathutil',
-        'pypathutil.scripts',
+        'pypathutil.endpoints',
     ],
     # from here all is optional
     description='command line utilities to help you work with paths',
