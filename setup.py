@@ -47,9 +47,7 @@ setuptools.setup(
     data_files=[
     ],
     entry_points={'console_scripts': [
-        'pypathutil_add=pypathutil.scripts.add:main',
-        'pypathutil_clean=pypathutil.scripts.clean:main',
-        'pypathutil_remove=pypathutil.scripts.remove:main',
+        'pypathutil=pypathutil.endpoints.main:main',
     ]},
     python_requires='>=3.4',
 )

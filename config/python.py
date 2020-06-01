@@ -3,9 +3,7 @@ import config.project
 package_name = config.project.project_name
 
 console_scripts = [
-    'pypathutil_add=pypathutil.scripts.add:main',
-    'pypathutil_clean=pypathutil.scripts.clean:main',
-    'pypathutil_remove=pypathutil.scripts.remove:main',
+    'pypathutil=pypathutil.endpoints.main:main',
 ]
 
 setup_requires = [
