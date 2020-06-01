@@ -66,7 +66,7 @@ def add() -> None:
 )
 def clean() -> None:
     """
-    This script cleans a path, removing elements which repeat or are not valid paths
+    clean a path, removing elements which repeat or are not valid paths
     """
     path = common.clean(
         path=ConfigPath.path,
