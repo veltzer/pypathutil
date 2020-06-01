@@ -1,5 +1,15 @@
-# production
-click
-pyfakeuse
-# development tools
+# THIS IS AN AUTO-GENERATED FILE. DO NOT EDIT!
+# production requirements
+pylogconf
+pytconf
+# dev requirements
+pyclassifiers
 pypitools
+pydmt
+Sphinx
+# test requirements
+pytest
+pytest-cov
+pylint
+pyflakes
+flake8
