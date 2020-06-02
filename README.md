@@ -15,21 +15,21 @@ elements, extra colons, wrong order and the like?
 This is the end of your troubles.
 
 
-    $ export PATH=$(pypathutil_add $PATH /usr/games/bin)
+    $ export PATH=$(pypathutil add $PATH /usr/games/bin)
 
 This is the same as adding:
 
-    $ export PATH=$(pypathutil_add --head $PATH /usr/games/bin)
+    $ export PATH=$(pypathutil add --head $PATH /usr/games/bin)
 
 Which means adding to the head of the path.
 
 If you want to add to the tail of the path just use:
 
-    $ export PATH=$(pypathutil_add --tail $PATH /usr/games/bin)
+    $ export PATH=$(pypathutil add --tail $PATH /usr/games/bin)
 
 If you are on windows and want a different separator
 
-    $ export PATH=$(pypathutil_add --separator \; $PATH /usr/games/bin)
+    $ export PATH=$(pypathutil add --separator \; $PATH /usr/games/bin)
 
 But default pypathutil will remove duplicate entries,
 remove non absolute paths, and remove folders which do not exist.
