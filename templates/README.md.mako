@@ -1,9 +1,14 @@
 <%!
     import config.project
+    import config.python
     import user.personal
 %>
 
 # *${config.project.project_name}* project by ${user.personal.personal_fullname}
+
+![GitHub](https://img.shields.io/github/license/veltzer/${config.project.github_repo_name})
+![PyPI](https://img.shields.io/pypi/v/${config.python.package_name})
+![PyPI - Format](https://img.shields.io/pypi/format/${config.python.package_name})
 
 Command line utilities to help you work with paths.
 
@@ -67,6 +72,3 @@ called solid).
 You can, of course, use pypathutil for it's API as a python module.
 It's quite intuitive.
 
-![GitHub](https://img.shields.io/github/license/veltzer/pydmt)
-![PyPI](https://img.shields.io/pypi/v/pydmt)
-![PyPI - Format](https://img.shields.io/pypi/format/pydmt)

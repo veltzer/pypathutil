@@ -2,6 +2,10 @@
 
 # *pypathutil* project by Mark Veltzer
 
+![GitHub](https://img.shields.io/github/license/veltzer/pypathutil)
+![PyPI](https://img.shields.io/pypi/v/pypathutil)
+![PyPI - Format](https://img.shields.io/pypi/format/pypathutil)
+
 Command line utilities to help you work with paths.
 
 
@@ -59,6 +63,3 @@ called solid).
 You can, of course, use pypathutil for it's API as a python module.
 It's quite intuitive.
 
-![GitHub](https://img.shields.io/github/license/veltzer/pydmt)
-![PyPI](https://img.shields.io/pypi/v/pydmt)
-![PyPI - Format](https://img.shields.io/pypi/format/pydmt)
