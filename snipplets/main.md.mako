@@ -1,13 +1,4 @@
-
-
-# *pypathutil* project by Mark Veltzer
-
-![GitHub](https://img.shields.io/github/license/veltzer/pypathutil)
-![PyPI](https://img.shields.io/pypi/v/pypathutil)
-![PyPI - Format](https://img.shields.io/pypi/format/pypathutil)
-
-command line utilities to help you work with paths
-
+## What is it for ?
 
 have you even done calculations of paths in shells of the form:
 
@@ -18,6 +9,7 @@ elements, extra colons, wrong order and the like?
 
 This is the end of your troubles.
 
+## Examples
 
     $ export PATH=$(pypathutil add $PATH /usr/games/bin)
 
@@ -39,6 +31,7 @@ But default pypathutil will remove duplicate entries,
 remove non absolute paths, and remove folders which do not exist.
 All of these can be controlled with appropriate flags.
 
+## Installing
 
     $ pip3 install pypathutil --user
 
@@ -52,6 +45,7 @@ If you don't have pip3 then you can probably get it using:
 
     $ sudo apt install python3-pip
 
+## Performance
 
 After doing a little performance work it dawned on me that writing bash
 code to do the same will be much faster. And I actually wrote bash
@@ -59,7 +53,7 @@ functions to implement all of this but this package is still my best
 suggestion for people who want a solid foundation (bash can not be
 called solid).
 
+## Using pypathutil API
 
 You can, of course, use pypathutil for it's API as a python module.
 It's quite intuitive.
-
