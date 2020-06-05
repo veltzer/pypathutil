@@ -6,6 +6,10 @@
 ![GitHub](https://img.shields.io/github/license/veltzer/pypathutil)
 ![PyPI](https://img.shields.io/pypi/v/pypathutil)
 ![PyPI - Format](https://img.shields.io/pypi/format/pypathutil)
+[![Downloads](https://pepy.tech/badge/pytsv)](https://pepy.tech/project/pypathutil)
+[![Downloads](https://pepy.tech/badge/pytsv/month)](https://pepy.tech/project/pypathutil/month)
+[![Downloads](https://pepy.tech/badge/pytsv/week)](https://pepy.tech/project/pypathutil/week)
+
 
 command line utilities to help you work with paths
 
