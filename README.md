@@ -2,14 +2,20 @@
 
 # *pypathutil* project by Mark Veltzer
 
-![Code style: black](https://img.shields.io/badge/code%20style-black-000000.svg)
-![GitHub](https://img.shields.io/github/license/veltzer/pypathutil)
-![PyPI](https://img.shields.io/pypi/v/pypathutil)
+![PyPI - Status](https://img.shields.io/pypi/status/pypathutil)
+![PyPI - Python Version](https://img.shields.io/pypi/pyversions/pypathutil)
+![PyPI - License](https://img.shields.io/pypi/l/pypathutil)
+![PyPI - Package Name](https://img.shields.io/pypi/v/pypathutil)
 ![PyPI - Format](https://img.shields.io/pypi/format/pypathutil)
-[![Downloads](https://pepy.tech/badge/pytsv)](https://pepy.tech/project/pypathutil)
-[![Downloads](https://pepy.tech/badge/pytsv/month)](https://pepy.tech/project/pypathutil/month)
-[![Downloads](https://pepy.tech/badge/pytsv/week)](https://pepy.tech/project/pypathutil/week)
 
+![PyPI - Downloads](https://img.shields.io/pypi/dd/pypathutil)
+![PyPI - Downloads](https://img.shields.io/pypi/dw/pypathutil)
+![PyPI - Downloads](https://img.shields.io/pypi/dm/pypathutil)
+
+![Code style: black](https://img.shields.io/badge/code%20style-black-000000.svg)
+![Downloads](https://pepy.tech/badge/pypathutil)
+![Downloads](https://pepy.tech/badge/pypathutil/month)
+![Downloads](https://pepy.tech/badge/pypathutil/week)
 
 command line utilities to help you work with paths
 
