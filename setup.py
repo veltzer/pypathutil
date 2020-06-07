@@ -32,7 +32,7 @@ setuptools.setup(
     ],
     url="https://veltzer.github.io/pypathutil",
     download_url="https://github.com/veltzer/pypathutil",
-    # license="MIT",
+    license="MIT",
     platforms=[
         'python3',
     ],
