@@ -1,5 +1,4 @@
 
-
 # *pypathutil* project by Mark Veltzer
 
 ![PyPI - Status](https://img.shields.io/pypi/status/pypathutil)
@@ -17,10 +16,10 @@
 ![Downloads](https://pepy.tech/badge/pypathutil/month)
 ![Downloads](https://pepy.tech/badge/pypathutil/week)
 
+
 command line utilities to help you work with paths
 
-project website: https://veltzer.github.io/pypathutil
-
+project website: <https://veltzer.github.io/pypathutil>
 
 have you even done calculations of paths in shells of the form:
 
