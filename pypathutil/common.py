@@ -123,3 +123,15 @@ def find_in_path(path: str, app: str, separator: str = os.pathsep, strict: bool 
         if is_exe(full_path_app):
             return full_path_app
     return None
+
+
+def find_in_standard_path(app: str) -> Union[None, str]:
+    """
+    Find in the standard path
+    :param app:
+    :return:
+    """
+    return find_in_path(
+        path=os.environ["PATH"],
+        app=app,
+    )

@@ -21,6 +21,7 @@ command line utilities to help you work with paths
 
 project website: <https://veltzer.github.io/pypathutil>
 
+
 have you even done calculations of paths in shells of the form:
 
     $ export PATH=$PATH:$HOME/bin
