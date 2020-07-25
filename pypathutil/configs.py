@@ -3,7 +3,7 @@ All configurations for pypathutil
 """
 import os
 
-from pytconf.config import Config, ParamCreator
+from pytconf import Config, ParamCreator
 
 
 class ConfigSeparator(Config):
