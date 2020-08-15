@@ -17,9 +17,12 @@
 ![Downloads](https://pepy.tech/badge/pypathutil/week)
 
 
+
 command line utilities to help you work with paths
 
 project website: <https://veltzer.github.io/pypathutil>
+
+chat with me at [![gitter](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/veltzer/mark.veltzer)
 
 
 have you even done calculations of paths in shells of the form:
