@@ -16,6 +16,8 @@
 ![Downloads](https://pepy.tech/badge/pypathutil/month)
 ![Downloads](https://pepy.tech/badge/pypathutil/week)
 
+[![Known Vulnerabilities](https://snyk.io/test/github/veltzer/pypathutil/badge.svg?targetFile=requirements.txt)](https://snyk.io/test/github/veltzer/pypathutil?targetFile=requirements.txt)
+
 
 
 command line utilities to help you work with paths
