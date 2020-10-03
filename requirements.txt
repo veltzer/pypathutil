@@ -11,5 +11,5 @@ Sphinx
 pytest
 pytest-cov
 pylint
-pyflakes
 flake8
+pymakehelper

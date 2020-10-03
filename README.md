@@ -19,6 +19,9 @@
 [![Known Vulnerabilities](https://snyk.io/test/github/veltzer/pypathutil/badge.svg?targetFile=requirements.txt)](https://snyk.io/test/github/veltzer/pypathutil?targetFile=requirements.txt)
 
 
+Actions
+
+![build](https://github.com/veltzer/pypathutil/workflows/build/badge.svg)
 
 command line utilities to help you work with paths
 

@@ -3,7 +3,7 @@ import config.project
 package_name = config.project.project_name
 
 console_scripts = [
-    'pypathutil=pypathutil.endpoints.main:main',
+    'pypathutil=pypathutil.main:main',
 ]
 
 setup_requires = [
@@ -18,8 +18,8 @@ test_requires = [
     'pytest',  # for testing
     'pytest-cov',  # for test coverage
     'pylint',  # to linting
-    'pyflakes',  # for linting
     'flake8',  # for linting
+    'pymakehelper',  # for make
 ]
 
 dev_requires = [

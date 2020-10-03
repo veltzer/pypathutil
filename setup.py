@@ -9,10 +9,9 @@ def get_readme():
 setuptools.setup(
     # the first three fields are a must according to the documentation
     name="pypathutil",
-    version="0.0.15",
+    version="0.0.16",
     packages=[
         'pypathutil',
-        'pypathutil.endpoints',
     ],
     # from here all is optional
     description="command line utilities to help you work with paths",
@@ -58,7 +57,7 @@ setuptools.setup(
     data_files=[
     ],
     entry_points={"console_scripts": [
-        'pypathutil=pypathutil.endpoints.main:main',
+        'pypathutil=pypathutil.main:main',
     ]},
     python_requires=">=3.6",
 )
