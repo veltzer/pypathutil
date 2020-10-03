@@ -1,35 +1,12 @@
 """
-The default group of operations that pypathutil has
+main
 """
+import pylogconf.core
+from pytconf import register_endpoint, register_main, config_arg_parse_and_launch
 
-from pytconf import register_endpoint, register_function_group
-
-import pypathutil.version
 from pypathutil import common
 from pypathutil.configs import ConfigFolder, ConfigPath, ConfigHead, ConfigSeparator, ConfigOps
-
-GROUP_NAME_DEFAULT = "default"
-GROUP_DESCRIPTION_DEFAULT = "all pypathutil commands"
-
-
-def register_group_default():
-    """
-    register the name and description of this group
-    """
-    register_function_group(
-        function_group_name=GROUP_NAME_DEFAULT,
-        function_group_description=GROUP_DESCRIPTION_DEFAULT,
-    )
-
-
-@register_endpoint(
-    group=GROUP_NAME_DEFAULT,
-)
-def version() -> None:
-    """
-    Print version
-    """
-    print(pypathutil.version.VERSION_STR)
+from pypathutil.static import DESCRIPTION, APP_NAME, VERSION_STR
 
 
 @register_endpoint(
@@ -39,12 +16,10 @@ def version() -> None:
         ConfigHead,
         ConfigSeparator,
         ConfigOps,
-    ]
+    ],
+    description="Add two paths together",
 )
 def add() -> None:
-    """
-    add two paths together
-    """
     new_path = common.add(
         path=ConfigPath.path,
         folder=ConfigFolder.folder,
@@ -62,12 +37,10 @@ def add() -> None:
         ConfigSeparator,
         ConfigOps,
         ConfigPath,
-    ]
+    ],
+    description="Clean a path, removing elements which repeat or are not valid paths",
 )
 def clean() -> None:
-    """
-    clean a path, removing elements which repeat or are not valid paths
-    """
     path = common.clean(
         path=ConfigPath.path,
         separator=ConfigSeparator.separator,
@@ -84,10 +57,10 @@ def clean() -> None:
         ConfigSeparator,
         ConfigPath,
         ConfigFolder,
-    ]
+    ],
+    description="Remove element from a path",
 )
 def remove() -> None:
-    """ remove element from a path """
     new_path = common.remove(
         path=ConfigPath.path,
         folder=ConfigFolder.folder,
@@ -97,3 +70,17 @@ def remove() -> None:
         remove_non_abs=ConfigOps.remove_non_abs,
     )
     print(new_path)
+
+
+@register_main(
+    main_description=DESCRIPTION,
+    app_name=APP_NAME,
+    version=VERSION_STR,
+)
+def main():
+    pylogconf.core.setup()
+    config_arg_parse_and_launch()
+
+
+if __name__ == '__main__':
+    main()

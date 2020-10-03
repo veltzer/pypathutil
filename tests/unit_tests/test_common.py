@@ -1,9 +1,9 @@
-from unittest import TestCase
+import unittest
 
 from pypathutil import common
 
 
-class Foo(TestCase):
+class Foo(unittest.TestCase):
     def test_add_basic(self):
         result = common.add(
             path="/etc:/var",

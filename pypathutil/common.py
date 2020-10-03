@@ -90,12 +90,12 @@ def clean(
     """
     returns a reduced version of the path. This means without repetition and without parts
     which are not folders.
-    :param remove_non_abs: 
-    :param remove_non_folders: 
-    :param remove_duplicates: 
-    :param path: 
-    :param separator: 
-    :return: 
+    :param remove_non_abs:
+    :param remove_non_folders:
+    :param remove_duplicates:
+    :param path:
+    :param separator:
+    :return:
     """
     if remove_duplicates:
         path = do_remove_duplicates(path, separator)
@@ -109,11 +109,11 @@ def clean(
 def find_in_path(path: str, app: str, separator: str = os.pathsep, strict: bool = False) -> Union[None, str]:
     """
     Return the full path if found, None otherwise
-    :param path: 
-    :param app: 
-    :param separator: 
-    :param strict: 
-    :return: 
+    :param path:
+    :param app:
+    :param separator:
+    :param strict:
+    :return:
     """
     for path_element in path.split(separator):
         if strict:
