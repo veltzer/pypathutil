@@ -10,23 +10,23 @@ setup_requires = [
 ]
 
 run_requires = [
-    'pylogconf',  # for nicer logging
-    'pytconf',  # for nicer logging
+    'pylogconf',
+    'pytconf',
 ]
 
 test_requires = [
-    'pytest',  # for testing
-    'pytest-cov',  # for test coverage
-    'pylint',  # to linting
-    'flake8',  # for linting
-    'pymakehelper',  # for make
+    'pytest',
+    'pytest-cov',
+    'pylint',
+    'flake8',
+    'pymakehelper',
 ]
 
 dev_requires = [
-    'pyclassifiers',  # for programmatic classifiers
-    'pypitools',  # for upload etc
-    'pydmt',  # for building
-    'Sphinx',  # for the sphinx builder
+    'pyclassifiers',
+    'pypitools',
+    'pydmt',
+    'Sphinx',
 ]
 
 install_requires = list(setup_requires)
@@ -35,5 +35,4 @@ install_requires.extend(run_requires)
 python_requires = ">=3.6"
 
 extras_require = {
-    # ':python_version == "2.7"': ['futures'],  # for python2.7 backport of concurrent.futures
 }
