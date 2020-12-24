@@ -12,11 +12,6 @@
 ![PyPI - Downloads](https://img.shields.io/pypi/dm/pypathutil)
 
 ![Code style: black](https://img.shields.io/badge/code%20style-black-000000.svg)
-![Downloads](https://pepy.tech/badge/pypathutil)
-![Downloads](https://pepy.tech/badge/pypathutil/month)
-![Downloads](https://pepy.tech/badge/pypathutil/week)
-
-[![Known Vulnerabilities](https://snyk.io/test/github/veltzer/pypathutil/badge.svg?targetFile=requirements.txt)](https://snyk.io/test/github/veltzer/pypathutil?targetFile=requirements.txt)
 
 
 Actions
