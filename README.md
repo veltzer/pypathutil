@@ -14,7 +14,6 @@
 ![Code style: black](https://img.shields.io/badge/code%20style-black-000000.svg)
 
 ![build](https://github.com/veltzer/pypathutil/workflows/build/badge.svg)
-
 command line utilities to help you work with paths
 
 project website: https://veltzer.github.io/pypathutil
