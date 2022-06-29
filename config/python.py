@@ -17,4 +17,5 @@ test_requires = [
     "pylint",
     "flake8",
     "pymakehelper",
+    "mypy",
 ]
