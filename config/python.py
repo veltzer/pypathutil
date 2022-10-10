@@ -2,8 +2,11 @@ console_scripts = [
     "pypathutil=pypathutil.main:main",
 ]
 dev_requires = [
-    "pyclassifiers",
     "pypitools",
+]
+make_requires = [
+    "pymakehelper",
+    "pyclassifiers",
     "pydmt",
     "Sphinx",
 ]
@@ -16,6 +19,5 @@ test_requires = [
     "pytest-cov",
     "pylint",
     "flake8",
-    "pymakehelper",
     "mypy",
 ]
