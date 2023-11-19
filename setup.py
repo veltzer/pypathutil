@@ -23,7 +23,7 @@ setuptools.setup(
     maintainer_email="mark.veltzer@gmail.com",
     keywords=[
         "path",
-        "command line",
+        "command-line",
         "shell",
         "reduce",
         "append",
