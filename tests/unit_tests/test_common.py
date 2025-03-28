@@ -1,3 +1,5 @@
+""" test_common.py """
+
 import unittest
 
 from pypathutil import common
