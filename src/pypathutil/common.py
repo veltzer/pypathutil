@@ -1,7 +1,6 @@
 """ common.py """
 
 import os
-from typing import Union
 
 
 def is_exe(path: str) -> bool:
