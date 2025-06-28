@@ -108,7 +108,7 @@ def clean(
     return path
 
 
-def find_in_path(path: str, app: str, separator: str = os.pathsep, strict: bool = False) -> Union[None, str]:
+def find_in_path(path: str, app: str, separator: str = os.pathsep, strict: bool = False) -> None | str:
     """
     Return the full path if found, None otherwise
     :param path:
@@ -127,7 +127,7 @@ def find_in_path(path: str, app: str, separator: str = os.pathsep, strict: bool 
     return None
 
 
-def find_in_standard_path(app: str) -> Union[None, str]:
+def find_in_standard_path(app: str) -> None | str:
     """
     Find in the standard path
     :param app:
