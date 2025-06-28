@@ -1,8 +1,8 @@
 """ python deps for this project """
 
-console_scripts: list[str] = [
-    "pypathutil=pypathutil.main:main",
-]
+scripts: dict[str,str] = {
+    "pypathutil": "pypathutil.main:main",
+}
 
 config_requires: list[str] = [
     "pyclassifiers",
