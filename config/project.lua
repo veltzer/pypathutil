@@ -8,3 +8,4 @@ KEYWORDS = {
     "append",
     "remove",
 }
+PYPI = true
