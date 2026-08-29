@@ -39,6 +39,14 @@ dependencies = [
     "pytconf",
 ]
 
+[dependency-groups]
+dev = [
+    "mypy",
+    "pylint",
+    "pytest",
+    "ruff",
+]
+
 [project.urls]
 "Homepage" = "https://github.com/veltzer/pypathutil"
 "Bug Tracker" = "https://github.com/veltzer/pypathutil/issues"
