@@ -5,7 +5,7 @@
 
 description: command line utilities to help you work with paths
 
-project website: https://veltzer.github.io/pypathutil
+project website: <https://veltzer.github.io/pypathutil>
 
 author: Mark Veltzer
 
