@@ -19,14 +19,13 @@ def remove(  # pylint: disable=too-many-positional-arguments
     if folder != "":
         path_elements = [x for x in path_elements if x != folder]
     new_path = separator.join(path_elements)
-    new_path = clean(
+    return clean(
         new_path,
         separator,
         remove_duplicates=remove_duplicates,
         remove_non_folders=remove_non_folders,
         remove_non_abs=remove_non_abs,
     )
-    return new_path
 
 
 def add(  # pylint: disable=too-many-positional-arguments
@@ -53,14 +52,13 @@ def add(  # pylint: disable=too-many-positional-arguments
         else:
             path_elements.append(folder)
     path = separator.join(path_elements)
-    path = clean(
+    return clean(
         path,
         separator,
         remove_duplicates=remove_duplicates,
         remove_non_folders=remove_non_folders,
         remove_non_abs=remove_non_abs,
     )
-    return path
 
 
 def do_remove_non_abs(path: str, separator: str = os.pathsep) -> str:
@@ -107,7 +105,7 @@ def clean(
     return path
 
 
-def find_in_path(path: str, app: str, separator: str = os.pathsep, strict: bool = False) -> None | str:
+def find_in_path(path: str, app: str, separator: str = os.pathsep, strict: bool = False) -> str | None:
     """
     Return the full path if found, None otherwise
     :param path:
@@ -126,7 +124,7 @@ def find_in_path(path: str, app: str, separator: str = os.pathsep, strict: bool 
     return None
 
 
-def find_in_standard_path(app: str) -> None | str:
+def find_in_standard_path(app: str) -> str | None:
     """
     Find in the standard path
     :param app:
