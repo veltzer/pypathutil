@@ -12,7 +12,7 @@ class Foo(unittest.TestCase):
             folder="/tmp",
             head=True,
         )
-        self.assertEqual(result, "/tmp:/etc:/var")
+        assert result == "/tmp:/etc:/var"
 
     def test_add_head_clean_path(self):
         result = common.add(
@@ -20,7 +20,7 @@ class Foo(unittest.TestCase):
             folder="/tmp",
             head=True,
         )
-        self.assertEqual(result, "/tmp:/var")
+        assert result == "/tmp:/var"
 
     def test_add_head_clean_folder(self):
         result = common.add(
@@ -28,7 +28,7 @@ class Foo(unittest.TestCase):
             folder="/non",
             head=True,
         )
-        self.assertEqual(result, "/etc:/var")
+        assert result == "/etc:/var"
 
     def test_add_head_empty_path(self):
         result = common.add(
@@ -36,7 +36,7 @@ class Foo(unittest.TestCase):
             folder="/etc",
             head=True,
         )
-        self.assertEqual(result, "/etc")
+        assert result == "/etc"
 
     def test_add_head_empty_path_empty_folder(self):
         result = common.add(
@@ -44,7 +44,7 @@ class Foo(unittest.TestCase):
             folder="",
             head=True,
         )
-        self.assertEqual(result, "")
+        assert result == ""
 
     def test_add_head_existing(self):
         result = common.add(
@@ -52,7 +52,7 @@ class Foo(unittest.TestCase):
             folder="/tmp",
             head=True,
         )
-        self.assertEqual(result, "/tmp:/var")
+        assert result == "/tmp:/var"
 
     def test_add_tail_existing(self):
         result = common.add(
@@ -60,7 +60,7 @@ class Foo(unittest.TestCase):
             folder="/var",
             head=False,
         )
-        self.assertEqual(result, "/tmp:/var")
+        assert result == "/tmp:/var"
 
     def test_add_head_no_clean(self):
         result = common.add(
@@ -69,4 +69,4 @@ class Foo(unittest.TestCase):
             remove_non_folders=False,
             head=True,
         )
-        self.assertEqual(result, "/c:/a:/b")
+        assert result == "/c:/a:/b"

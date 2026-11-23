@@ -7,7 +7,7 @@ def is_exe(path: str) -> bool:
     return os.path.isfile(path) and os.access(path, os.X_OK)
 
 
-def remove(  # pylint: disable=too-many-positional-arguments
+def remove(
     folder: str,
     path: str,
     separator: str = os.pathsep,
@@ -28,7 +28,7 @@ def remove(  # pylint: disable=too-many-positional-arguments
     )
 
 
-def add(  # pylint: disable=too-many-positional-arguments
+def add(
     folder: str,
     path: str,
     head: bool,
