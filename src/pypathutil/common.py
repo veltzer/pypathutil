@@ -11,6 +11,7 @@ def remove(
     folder: str,
     path: str,
     separator: str = os.pathsep,
+    *,
     remove_duplicates: bool = True,
     remove_non_folders: bool = True,
     remove_non_abs: bool = True,
@@ -31,6 +32,7 @@ def remove(
 def add(
     folder: str,
     path: str,
+    *,
     head: bool,
     separator: str = os.pathsep,
     remove_duplicates: bool = True,
@@ -82,6 +84,7 @@ def do_remove_duplicates(path: str, separator: str = os.pathsep) -> str:
 def clean(
     path: str,
     separator: str = os.pathsep,
+    *,
     remove_duplicates: bool = True,
     remove_non_folders: bool = True,
     remove_non_abs: bool = True,
@@ -105,7 +108,7 @@ def clean(
     return path
 
 
-def find_in_path(path: str, app: str, separator: str = os.pathsep, strict: bool = False) -> str | None:
+def find_in_path(path: str, app: str, separator: str = os.pathsep, *, strict: bool = False) -> str | None:
     """
     Return the full path if found, None otherwise
     :param path:
